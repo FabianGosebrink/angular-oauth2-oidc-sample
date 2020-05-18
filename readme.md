@@ -6,9 +6,7 @@
   </a>
 </p>
 
-## Author
-
-👤 **Fabian Gosebrink**
+## Application
 
 In this sample application we find a angular client authorizing against an STS getting a token and asking an ASP.NET Core WebAPI for data.
 
