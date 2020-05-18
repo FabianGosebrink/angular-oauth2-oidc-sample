@@ -32,7 +32,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
       { path: 'unauthorized', component: UnauthorizedComponent },
     ]),
     AuthModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     OidcConfigService,
@@ -45,8 +45,8 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
-      multi: true
-  },
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
