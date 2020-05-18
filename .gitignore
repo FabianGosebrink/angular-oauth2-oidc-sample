@@ -1,0 +1,3 @@
+/server/bin
+/server/obj/
+/client/angular-oidc-oauth2/node_modules
