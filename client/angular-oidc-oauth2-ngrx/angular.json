@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-oidc-oauth2-ngrx"
+    }
+  },
+  "defaultProject": "angular-oidc-oauth2-ngrx",
+  "cli": {
+    "analytics": false
+  }
 }
