@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { appReducer, appEffects } from './store';
 import { AppRoutingModule } from './app-routing.module';
+import { ProtectedComponent } from './protected/protected.component';
 
 export function configureAuth(oidcConfigService: OidcConfigService) {
   return () =>
@@ -26,7 +27,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, UnauthorizedComponent],
+  declarations: [AppComponent, HomeComponent, UnauthorizedComponent, ProtectedComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,8 @@
+<p>protected works!</p>
+
+<h2>Userdata</h2>
+<div *ngIf="userData$ | async as userData">{{ userData | json }}</div>
+
+<hr />
+<h2>Secret Data</h2>
+<div *ngIf="secretData$ | async as secretData">{{ secretData | json }}</div>

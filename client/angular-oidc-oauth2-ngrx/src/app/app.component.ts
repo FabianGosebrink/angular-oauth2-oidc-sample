@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { checkAuth } from './store/auth';
+import { Store, select } from '@ngrx/store';
+import { checkAuth, selectIsAuthenticated, login, logout } from './store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,20 @@ import { checkAuth } from './store/auth';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  isAuthenticated$: Observable<boolean>;
   constructor(private store: Store<any>) {}
 
   ngOnInit() {
     this.store.dispatch(checkAuth());
+
+    this.isAuthenticated$ = this.store.pipe(select(selectIsAuthenticated));
+  }
+
+  login() {
+    this.store.dispatch(login());
+  }
+
+  logout() {
+    this.store.dispatch(logout());
   }
 }
