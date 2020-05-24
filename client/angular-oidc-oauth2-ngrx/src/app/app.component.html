@@ -3,8 +3,9 @@
 <div>
   <a [routerLink]="'home'">home</a>
 
-  | <a [routerLink]="'protected'">protected</a>
-  <span *ngIf="isAuthenticated$ | async"> </span>
+  <span *ngIf="isAuthenticated$ | async">
+    | <a [routerLink]="'protected'">protected</a></span
+  >
 </div>
 <br />
 <div *ngIf="isAuthenticated$ | async as isAuthenticated; else noAuth">
