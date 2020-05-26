@@ -27,6 +27,6 @@ export class AuthService {
   }
 
   signOut() {
-    this.oidcSecurityService.logoff();
+    this.oidcSecurityService.logoffAndRevokeTokens();
   }
 }
