@@ -1,19 +1,14 @@
 <h2>Authentication with ngrx</h2>
 
-<div>
-  <a [routerLink]="'home'">home</a>
-
-  <span *ngIf="isAuthenticated$ | async">
-    | <a [routerLink]="'protected'">protected</a></span
-  >
-</div>
-<br />
 <div *ngIf="isAuthenticated$ | async as isAuthenticated; else noAuth">
+  <a [routerLink]="'home'">home</a> |
+  <a [routerLink]="'protected'">protected</a> |
+
   <button (click)="logout()">Logout</button>
-  <hr />
 </div>
 
 <ng-template #noAuth>
+  <a [routerLink]="'home'">home</a> |
   <button (click)="login()">Login</button>
   <hr />
 </ng-template>
