@@ -10,6 +10,8 @@
 
 In this sample application we find a angular client authorizing against an STS getting a token and asking an ASP.NET Core WebAPI for data.
 
+The STS can be found here [https://github.com/FabianGosebrink/security-token-service](https://github.com/FabianGosebrink/security-token-service)
+
 Find the client in the `client` folder and the ASP.NET Core WebAPI in the `server` folder.
 
 Get the backend running by
